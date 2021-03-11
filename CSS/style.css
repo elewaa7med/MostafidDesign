@@ -1,15 +1,18 @@
+@font-face {
+    font-family: "Frutiger";
+    src: url("../webfonts/fru/frutiger-normal-5871d13e09363.ttf");
+}
 html, 
 body {
     height: 100%;
     background-color: #0a1332;
 }
-body{
-    font-family: FrutigerLTArabic ,calibri;
-}
+
 /* #region Navbar */
 nav{
     background-color: transparent;
     padding: 0px 20px;
+    direction:rtl;
 }
 
 nav a img:first-of-type{
@@ -22,16 +25,18 @@ nav a img:nth-of-type(2){
     margin-right: 20px;
 }
 
+
+nav ul{
+    text-align: right;
+    margin: auto;
+    direction: ltr;
+}
+
 nav ul li a {
     color: #fff;
     text-transform: uppercase;
     font-weight: 500;
     font-size: 18px;
-}
-
-nav ul{
-    text-align: right;
-    margin: auto;
 }
 
 nav ul li {
@@ -44,10 +49,19 @@ nav ul li .active{
     color:#4f693a;
     font-weight: bold;
 }
-
+nav button {
+    border: none;
+    background: #4f693a;
+    color: #fff;
+    border-radius: 5px;
+    text-transform: capitalize;
+    margin-bottom: 3px;
+}
 nav .navbar-collapse img{
     width: 100px;
+    height: 59px;
 }
+
 /* #endregion */
 
 #left-arrow,
@@ -55,12 +69,13 @@ nav .navbar-collapse img{
     text-align: center;
 
 }
+
 #left-arrow:hover,
 #right-arrow:hover{
 cursor: pointer;
 }
 .nav-fill {
-    margin-top:20px;
+    margin-top:5px;
 }
 .nav-fill .nav-item{
     background-color:#4f693a;
@@ -71,6 +86,7 @@ cursor: pointer;
 .nav-fill .nav-item a{
     color:#fff;
     text-transform: uppercase;
+    font-weight: bold;
 }
 .nav-fill .nav-item .active{
     background-color: #a5cc7d;
@@ -86,7 +102,7 @@ height: fit-content;
 #right-arrow i
 {
     color:#fff;
-    font-size: 50px;
+    font-size: 85px;
     margin-bottom: 5px;
 }
 
@@ -103,7 +119,7 @@ height: fit-content;
 }
 
 .MContaint{
-    margin-top: 20px;
+    margin-top: 10px;
     padding: 0px;
     width: 100%;
 }
@@ -115,10 +131,11 @@ height: fit-content;
     background-color: #283758;
     border-radius: 15px;
     color: #fff;
-    width: 90%;
+    width: 88%;
     padding: 25px 0px;
-    height: 200px;
-    margin:10px;
+    height: 207px;
+    margin: 10px;
+    padding-top: 15px;
 }
 
 .containt #service-type .stick p,
@@ -131,64 +148,60 @@ height: fit-content;
     font-weight: bold;
 }
 
-.containt #service-type  .stick p:first-of-type{
-    width: 38%;
-    margin: 0px auto;
-    font-size: 67px;
-    border-radius: 10px;
+.containt #service-type  .col-md-3 .stick img{
+    width: 90px;
     margin-bottom: 40px;
 }
-.containt #service-type  .col-sm-3:nth-of-type(1) .stick p:first-of-type{
-    background-color: #b73559;
-}
 
-.containt #service-type  .col-sm-3:nth-of-type(2) .stick p:first-of-type{
-    background-color: #1f84a0;
-}
-.containt #service-type  .col-sm-3:nth-of-type(3) .stick p:first-of-type{
-    background-color: #bc712d;
-}
-.containt #service-type  .col-sm-3:nth-of-type(5) .stick p:first-of-type{
-    background-color: #a66ca9;
-}
-.containt #service-type  .col-sm-3:nth-of-type(6) .stick p:first-of-type{
-    background-color: #e4b84b;
-}
-.containt #service-type  .col-sm-3:nth-of-type(7) .stick p:first-of-type{
-    background-color: #619685;
-}
-.containt #service-type  .col-sm-3:nth-of-type(8) .stick p:first-of-type{
-    background-color: #764269;
-}
-
+.containt #service-type   .stick p:nth-of-type(1),
 .containt #service-type   .stick p:nth-of-type(2),
-.containt #service-type   .stick p:nth-of-type(3),
 .containt #request-type  .stick p:nth-of-type(1)
 {
-    letter-spacing: 0.4em;
+    letter-spacing: 0.3em;
+    font-weight: 500;
 }
 
-.containt #service-type  .col-sm-3:nth-of-type(2) .stick p:nth-of-type(2),
-.containt #request-type .col-sm-3:nth-of-type(2) .stick p:nth-of-type(2){
+.containt #service-type  .col-md-3:nth-of-type(2) .stick p:nth-of-type(2),
+.containt #request-type .col-md-3:nth-of-type(2) .stick p:nth-of-type(2){
     letter-spacing: 0.15em;
 }
-.containt #service-type  .col-sm-3:nth-of-type(2) .stick p:nth-of-type(3),
-.containt #request-type .col-sm-3:nth-of-type(2) .stick p:nth-of-type(3){
+.containt #service-type  .col-md-3:nth-of-type(2) .stick p:nth-of-type(3),
+.containt #request-type .col-md-3:nth-of-type(2) .stick p:nth-of-type(3){
     letter-spacing: 0.7em;
 
 }
 #request-type .stick img{
-    width:90px;
+    width: 115px;
     margin-bottom: 20px;
 }
-#start-request .stick{
-    margin:auto
+.containt #start-request .stick{
+    margin:auto;
+    height: 250px;
+    width: 88%;
 }
+
+.containt #start-request .stick p{
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.containt #start-request .first{
+    letter-spacing: 0.6em;
+}
+
+.containt #start-request .second{
+    letter-spacing: 0.1em;
+}
+
+.containt #start-request .first1{
+    letter-spacing: 0.3em;
+}
+
 #start-request .stick img {
-    width: 95px;
-    margin-bottom: 20px;
-    background-color: #4f693a;
-    padding: 13px;
+    width: 110px;
+    margin-bottom: 35px;
+    background-color: rgb(79, 105, 58);
+    padding: 24px 13px;
     border-radius: 9px;
 }
 
@@ -197,7 +210,7 @@ height: fit-content;
 }
 
 #start-request .main-title{
-    margin:20px 0px;
+    margin:5px 0px 20px;
 }
 
 #start-request .main-title p{
@@ -209,12 +222,16 @@ height: fit-content;
 }
 
 #start-request .main-title p:first-of-type{
-    letter-spacing: 0.5em;
+    letter-spacing: 0.2em;
+    font-size: 26px;
+    font-weight: 500;
 }
 
 #start-request .main-title p:nth-of-type(2){
     letter-spacing: 0.1em;
     word-spacing: 0.5em;
+    font-weight: 500;
+    font-size: 24px;
 }
 #personel-data-m ,#personel-data{
     padding:0px;
@@ -226,7 +243,7 @@ height: fit-content;
     text-transform: uppercase;
     font-size: 24px;
     color:#fff;
-    font-weight: bold;
+    font-weight: 500;
     text-align: center;
     margin: 0px;
     margin-bottom: 10px;
@@ -262,17 +279,19 @@ height: fit-content;
 }
 #personel-data .row .col-md-2 label{
     color:#fff;
-
+    font-size: 14px;
 }
+
 #personel-data .row  img,
 #Documents .row  img{
-    width: 20px;
+    width: 15px;
 }
 
 #personel-data .row .col-md-2 select{
     width: 84%;
     border-radius: 4px;
     margin:1px 0px;
+    font-size: 14px;
 }
 
 #personel-data .row .col-md-2 input{
@@ -282,6 +301,7 @@ height: fit-content;
     border:none;
     margin:1px 0px
 }
+
 #Documents .row {
     margin-bottom: 0px;
     padding-bottom: 0px;
@@ -289,9 +309,23 @@ height: fit-content;
 #Documents .row .col-md-3 {
     padding:0px
 }
+#Documents .insideTextArea{
+    position: absolute;
+}
+#Documents .insideTextArea img{
+    margin:10px
+}
+#Documents .insideTextArea span{
+    color: #939999;
+    font-size: 12px;
+    margin: 0px 50px;
+}
+
+#Documents .row 
 #Documents select {
     width: 85%;
     border-radius: 4px;
+    font-size: 14px;
 }
 
 #Documents textarea {
@@ -343,8 +377,9 @@ height: fit-content;
 
 
 #Confirmation{
-    padding:0px 15%;
+    padding:0px 11%;
 }
+
 #Confirmation p,
 #Confirmation li{
     color:#fff;
@@ -367,7 +402,7 @@ height: fit-content;
 }
 #Confirmation button{
     text-align: center;
-    width: 150px;
+    width: 185px;
     margin: 10px 25px 20px;
     color:#4f693a;
     text-transform: uppercase;
@@ -388,6 +423,7 @@ height: fit-content;
     font-size: 18px;
     margin: 20px 0px;
     box-shadow: 3px 5px 3px #000;
+    display: none;
 }
 #Confirmation .success span:nth-of-type(1){
     word-spacing: 12px;
@@ -398,11 +434,106 @@ height: fit-content;
 }
 
 .stick:hover{
-    box-shadow: 3px 5px 12px #000,
-    -3px -5px 12px #000;
+    box-shadow: 3px 5px 12px #6e6e6e;
     cursor: pointer;
 }
 .stick.active{
-    box-shadow: 3px 5px 12px #000,
-    -3px -5px 12px #000;
+    box-shadow: 3px 5px 12px #6e6e6e, -3px -5px 12px #5a5a5a;
+}
+
+
+.containt2 .col-md-12{
+    margin:auto;
+    width: 90%;
+    text-align: center;
+}
+
+.containt2 .col-md-12:first-of-type,
+.containt2 .col-md-12:nth-of-type(2){
+    background-color: #283758;
+}
+.containt2 .row .col-md-12:first-of-type img{
+    width: 46px;
+    border: 2px solid #4f693a;
+    border-radius: 5px;
+    line-height: -7px;
+    margin-top: -16px;
+  
+}
+
+.containt2 .row .col-md-12 p,
+.containt2 .row .col-md-12 label{
+    color:#fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 22px;
+    text-align: center;
+}
+.containt2 .row .col-md-12:first-of-type{
+    margin-bottom: 7px;
+}
+
+.containt2 .row .col-md-12:nth-of-type(2){
+    margin-bottom: 30px;
+}
+
+.containt2 .row .col-md-12:first-of-type p{
+    padding:15px 0px;
+    margin-bottom:0px
+}
+
+.containt2 .row .col-md-12:first-of-type div span{
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 12px;
+    text-align: center;
+    display: inline-block;
+    padding: 4px 0px;
+    margin-top: 7px;
+}
+
+.containt2 .row .col-md-12:nth-of-type(2) label{
+    padding: 15px 10px;
+}
+
+.containt2 .row .col-md-12:nth-of-type(2) input{
+    width: 200px;
+}
+
+.containt2 .row .col-md-12:nth-of-type(3) label{
+    font-size: 15px;
+    text-align: left;
+}
+
+.containt2 .row .col-md-12:nth-of-type(3) span{
+    font-size: 16px;
+    color:#b73559;
+    background:#fff;
+    width: 120px;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.containt2 .row .col-md-12:nth-of-type(3) .col-md-3:nth-of-type(1) label{
+    position: relative;
+    bottom: 28px;
+    margin-right: 20px;
+}
+
+.containt2 .row .col-md-12:nth-of-type(3) .col-md-3:nth-of-type(1) span{
+    width: 30px;
+    height: 20px;
+}
+
+.containt2 .row .col-md-12:nth-of-type(3) .col-md-3:nth-of-type(1) span.active span{
+    background-color:#b73559;
+    height: 15px;
+    width: 25px;
+}
+
+.containt2 .row .col-md-12:nth-of-type(3) .col-md-3:nth-of-type(2) span,
+.containt2 .row .col-md-12:nth-of-type(3) .col-md-3:nth-of-type(4) span{
+    position: relative;
+    bottom: 16px;
 }

@@ -32,13 +32,13 @@ $("#left-arrow").click(function () {
 let dropArea = document.getElementById('drop-area');
 
 $("#drop-area").click(function(){
-    console.log("testings");
     $("#filelist").click();
 });
 
 ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
     dropArea.addEventListener(eventName, preventDefaults, false)
 });
+
 dropArea.addEventListener('drop', handleDrop, false);
 function preventDefaults (e) {
     e.preventDefault()
@@ -48,11 +48,12 @@ function preventDefaults (e) {
 function handleDrop(e) {
     let dt = e.dataTransfer
     let files = dt.files
-    // handleFiles(files)
+    handleFiles(files)
 }
 
 function handleFiles(files) {
     let sum = 0;
+    $('#filesName').html("");
     ([...files]).forEach(function(file){
         console.log(file.size);
         sum = sum + file.size;
@@ -62,7 +63,7 @@ function handleFiles(files) {
         alert("max files size 20MB")
     }else{
         ([...files]).forEach(function(file){
-            $('#filesName').append("<div class='col-md-5 fileshow'>"+file.name + "\t ("+ Math.ceil(file.size/1024) +" kb)</div>")
+            $('#filesName').append("<div class='col-md-5 fileshow'>"+ file.name.substring(0,9) + ".. \t ("+ Math.ceil(file.size/1024) +" kb) <meter min=1 max=10 value=10></meter></div>")
         });
     }
 }
@@ -73,3 +74,7 @@ $(".stick").click(function(event){
     $(event.currentTarget).addClass("active");
 });
 
+
+function submit(){
+    $("#Confirmation .success").show();
+}

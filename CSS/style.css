@@ -11,7 +11,7 @@ body {
 /* #region Navbar */
 nav{
     background-color: transparent;
-    padding: 0px 20px;
+    padding: 0px 45px;
     direction:rtl;
 }
 
@@ -121,6 +121,10 @@ height: fit-content;
 .MContaint{
     margin-top: 10px;
     padding: 0px;
+    width: 100%;
+}
+
+.containt2 >.row{
     width: 100%;
 }
 
@@ -321,18 +325,25 @@ height: fit-content;
     margin: 0px 50px;
 }
 
-#Documents .row 
 #Documents select {
-    width: 85%;
+    width: 80%;
     border-radius: 4px;
     font-size: 14px;
+    overflow: auto;
 }
 
 #Documents textarea {
     width: 100%;
     resize: none;
-    height: 335%;
+    height: 254%;
     border-radius: 5px;
+}
+#Documents .insideTextAreaCounter{
+    position: absolute;
+    top: 220%;
+    left:50%;
+    text-align: center;
+    display: none;
 }
 #Documents .col-md-8{
     background-color: #fff;
@@ -434,11 +445,11 @@ height: fit-content;
 }
 
 .stick:hover{
-    box-shadow: 3px 5px 12px #6e6e6e;
+    box-shadow: 3px 5px 12px #bcb8b8;
     cursor: pointer;
 }
 .stick.active{
-    box-shadow: 3px 5px 12px #6e6e6e, -3px -5px 12px #5a5a5a;
+    box-shadow: 5px 4px 12px #bcb8b8, -5px -6px 12px #bcb8b8
 }
 
 
@@ -498,7 +509,11 @@ height: fit-content;
 }
 
 .containt2 .row .col-md-12:nth-of-type(2) input{
-    width: 200px;
+    width: 22px;
+    height: 26px;
+    color: #b73559;
+    font-weight: bold;
+    font-size: 21px;
 }
 
 .containt2 .row .col-md-12:nth-of-type(3) label{
@@ -536,4 +551,136 @@ height: fit-content;
 .containt2 .row .col-md-12:nth-of-type(3) .col-md-3:nth-of-type(4) span{
     position: relative;
     bottom: 16px;
+}
+
+.containt2 .row .col-md-12:nth-of-type(3) .col-md-12{
+    background-color: #fff;
+    padding:25px 20px 25px;
+    margin-top:15px
+}
+.containt2 .row .col-md-12:nth-of-type(3) .col-md-12 .col-md-2{
+    padding:0px
+}
+
+.containt2 .row .col-md-12:nth-of-type(3) .col-md-12 .border-state{
+    border: 5px solid #b73559;
+    border-radius: 10px;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.containt2 .row .col-md-12:nth-of-type(3){
+    display: none;
+}
+.containt2 .row .col-md-12:nth-of-type(3) .col-md-12 .border-state img{
+    width: 80px;
+    height: 80px;
+    background-color: #0a1332;
+    border-radius: 10px;
+    padding: 8px;
+    border: 3px solid #fff;
+}
+
+.containt2 .row .col-md-12:nth-of-type(3) .col-md-12 .col-md-2 span{
+    background: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.containt2 .row .col-md-12:nth-of-type(3) .col-md-12 .col-md-2 span:last-of-type{
+    letter-spacing: 0.15em;
+}
+
+.containt2 .row .col-md-12:nth-of-type(3) .col-md-12 .col-md-1{
+    padding:0px
+}
+
+.containt2 .row .col-md-12:nth-of-type(3) .col-md-12 .col-md-1 span
+{
+    display: inline-block;
+    height: 5px;
+    background-color: #b73559;
+    position: relative;
+    left: -25px;
+    width: 154%;
+    top: 30px;
+}
+.progress-sucess-state div,
+.progress-sucess-state span{
+    color:#4f693a !important;
+    border-color: #4f693a !important;
+}
+.progress-sucess-state.col-md-1 span{
+    background-color: #4f693a !important;
+}
+.modal-dialog {
+    max-width: 430px !important;
+    min-width: 430px !important;
+}
+.modal-body {
+    text-align: center;
+    background-color: #283758;
+    border: 2px solid #eee;
+    box-shadow: 2px 2px 3px #eee
+}
+.modal-body img{
+ width: 120px;
+ display: block;
+ margin: 20px auto;
+}
+.modal-body p{
+    color: #fff;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    font-size: 17px;
+}
+.modal-body .row > div{
+    margin:5px 0px
+}
+.modal-body .row > div label{
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 2em;
+}
+.modal-body .row > div input{
+    width: 100%;
+    border:none;
+    border-radius: 5px;
+    height: 30px;
+    padding: 2px 5px
+}
+ input:focus{
+     outline: none;
+ }
+.modal-body .row button{
+border: none;
+    margin: 5px;
+    background-color: #4b7428;
+    color: #fff;
+    width: 120px;
+    height: 39px;
+    text-transform: uppercase;
+    box-shadow: 2px 2px 2px #767676;
+    border-radius: 6px;
+}
+/************************************/
+@media (min-width: 768px){
+    .containt2 .row .col-md-12:nth-of-type(3) .col-md-12 .col-md-2 {
+    flex: 0 0 auto;
+    width: 12.666667%;
+}
+}
+
+#ReviewMaster,
+#ReviewMaster2{
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    background-color: rgba(100, 0, 0, 0.3);
+}
+
+#ReviewMaster2 button{
+    background-color: #4f693a;
+    border: none;
+    width: 100px;
+    height: 40px;
 }
